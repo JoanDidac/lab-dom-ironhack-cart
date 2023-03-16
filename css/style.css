@@ -7,6 +7,15 @@ body {
   font-family: 'Roboto Mono', sans-serif;
   line-height: 1.5;
   color: #2d354c;
+  background-image: radial-gradient(circle at center, #60b3f7, #229be7, #017bbc);
+  background-size: 100%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0 0; }
+  50% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
 }
 
 button,
@@ -19,7 +28,9 @@ th,
 td,
 button,
 input {
-  padding: 0.75em 1em;
+  padding: 0.55em 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table#cart {
@@ -29,6 +40,9 @@ table#cart {
 
 table#cart tfoot {
   background: #eee;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 60em;
 }
 
 table#cart td,
@@ -45,6 +59,8 @@ table input[type='number'] {
   border: 0;
   border-radius: 0.25em;
   cursor: pointer;
+  margin-left: 13px;
+  box-shadow: 1px 2px 3px rgba(56, 56, 56, 0.542);
 }
 
 .btn-success,
@@ -64,4 +80,15 @@ h1,
 h2,
 .calculate-total {
   text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#calculate {
+  margin-left: 10px;
 }
